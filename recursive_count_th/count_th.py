@@ -7,4 +7,13 @@ def count_th(word):
     
     # TBC
     
-    pass
+    
+    count=[]
+    def recursion(word):
+        if word[len(word)-2:len(word)] =="th":
+            count.append(1)
+        while len(word)>1:
+            return recursion(word[:len(word)-1])
+    recursion(word)
+    return sum(count)
+    
